@@ -10,7 +10,6 @@ require 'optparse'
 require 'ostruct'
 require 'rest_client'
 require 'securerandom'
-require 'active_support/core_ext/hash'
 
 # This gem
 require_relative 'ruby/version'
