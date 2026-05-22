@@ -25,7 +25,7 @@ jobs:
 #    They are not being dropped from support, just from CI testing for now.
 #          - '3.1.7'
 #          - '3.0.7'
-#          - '2.7.8'
+          - '2.7.8'
 
     steps:
     - uses: actions/checkout@v3
