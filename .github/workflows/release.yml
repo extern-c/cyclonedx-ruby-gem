@@ -3,6 +3,8 @@ name: Release
 on:
   push:
     tags: ["v*"]
+  pull_request:
+    branches: ['**']
   workflow_dispatch:
 
 permissions:
@@ -29,4 +31,27 @@ jobs:
         run: bundle install
       - name: Run the default task
         run: bundle exec rake
+  # push:
+  #   needs: test
+  #   if: github.repository == 'extern-c/cyclonedx-ruby-gem'
+  #   runs-on: ubuntu-latest
+
+  #   environment: release
+
+  #   permissions:
+  #     contents: write
+
+  #   steps:
+  #     - name: Checkout Code
+  #       # see https://github.com/actions/checkout
+  #       uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+          
+  #     - name: Create GitHub Release
+  #       run: |
+  #         gh release create "${{ github.ref_name }}" \
+  #           --verify-tag \
+  #           --generate-notes \
+  #           --draft
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
