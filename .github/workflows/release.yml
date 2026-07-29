@@ -48,7 +48,7 @@ jobs:
         # see https://github.com/ruby/setup-ruby
         uses: ruby/setup-ruby@003a5c4d8d6321bd302e38f6f0ec593f77f06600 # v1.319.0
         with:
-          ruby-version: '3.4' # Stable environment to package the gem for the supported ruby versions
+          ruby-version: '3.4.10' # Stable environment to package the gem for the supported ruby versions
           bundler-cache: false
       - name: Push gem to RubyGems
         # see https://github.com/rubygems/release-gem
