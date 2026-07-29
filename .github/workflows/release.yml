@@ -89,7 +89,7 @@ jobs:
           declare -a FLAGS=("--verify-tag" "--generate-notes")
 
           # Determine release type from tag suffix
-          if [[ "$GITHUB_REF_NAME" =~ -(alpha|beta|rc|pre)[0-9.]*$ ]]; then
+          if [[ "$GITHUB_REF_NAME" =~ [-\.](alpha|beta|rc|pre)[0-9.]*$ ]]; then
             FLAGS+=("--prerelease")
           fi
 
